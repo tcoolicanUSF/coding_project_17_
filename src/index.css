@@ -1,18 +1,16 @@
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -21,20 +19,20 @@ a {
 a:hover {
   color: #535bf2;
 }
-
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: 1rem;
 }
-
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2em;
+  line-height: 1.2;
+  margin: 1rem 0;
 }
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -53,7 +51,51 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+.toolbar {
+  width: 100%;
+  max-width: 1280px;
+  background: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.toolbar h1 {
+  font-size: 1.5em;
+  margin: 0;
+}
+.toolbar button {
+  background-color: #646cff;
+  color: #ffffff;
+}
+.toolbar button:hover {
+  background-color: #535bf2;
+}
+.tour-card {
+  background: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.tour-card h2 {
+  font-size: 1.2em;
+  margin-bottom: 0.5rem;
+}
+.tour-card p {
+  font-size: 0.9em;
+  margin-bottom: 1rem;
+}
+.tour-card button {
+  width: 100%;
+  text-align: center;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +106,13 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  .toolbar {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  .tour-card {
+    background-color: #ffffff;
+    color: #213547;
   }
 }
